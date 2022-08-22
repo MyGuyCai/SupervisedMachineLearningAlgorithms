@@ -170,6 +170,6 @@ if __name__ == "__main__":
     # finally we can run the modelling
     model.run_modelling()
 
-    # printing the results of our Logistic Regression
+    # printing the results of our LogisticRegression
     print(model.report)
     print(model.confusion_dict)
