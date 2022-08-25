@@ -28,14 +28,14 @@ class RandomForestModel:
         y = self.data_frame[self.dependent]
         x = self.data_frame.drop(columns=[self.dependent])
 
-        X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=42)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=42)
 
         # create the random forest classifier
         classifier = RandomForestClassifier(n_jobs=2, random_state=42)
         # fit to existing training set
-        classifier.fit(X_train, y_train)
+        classifier.fit(x_train, y_train)
         # Predict the response for test dataset
-        y_pred = classifier.predict(X_test)
+        y_pred = classifier.predict(x_test)
         # Model Accuracy
         print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
 

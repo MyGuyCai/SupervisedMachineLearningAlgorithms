@@ -73,9 +73,9 @@ class LogisticRegressionModel:
                     spec_c.append([{'colspan': columns}])
                 else:
                     spec_c[0].append(None)
-            for c in range(row_c - 1):
+            for _ in range(row_c - 1):
                 sp = []
-                for r in range(columns):
+                for _ in range(columns):
                     sp.append({})
                 spec_c.append(sp)
 

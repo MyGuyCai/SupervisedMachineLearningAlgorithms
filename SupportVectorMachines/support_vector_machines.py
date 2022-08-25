@@ -33,6 +33,6 @@ class SupportVectorMachine:
 
 if __name__ == "__main__":
     vector_machine = SupportVectorMachine('datasets/Iris.csv', 'Species', 'Id')
-    # vector_machine.show_graphs('SepalLengthCm')
-    # vector_machine.show_graphs('SepalWidthCm')
+    vector_machine.show_graphs('SepalLengthCm')
+    vector_machine.show_graphs('SepalWidthCm')
     vector_machine.run_modelling()
